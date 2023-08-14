@@ -1,0 +1,10 @@
+{
+  "name": "Dissonant",
+  "version": "0.0.1",
+  "description": "Modular discord bot written in TypeScript",
+  "main": "src/entrypoint.ts",
+  "repository": "https://github.com/vargrind/Dissonant",
+  "author": "vargrind <108461102+vargrind@users.noreply.github.com>",
+  "license": "MPL 2.0",
+  "private": false
+}
