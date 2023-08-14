@@ -1,8 +1,14 @@
-import postgres from "postgres";
+import { Client } from "pg";
+
+export interface Database {
+  
+}
 
 export interface DatabaseConfig {
   // url
   url: string;
+  // port
+  port: number;
   // user
   user: string;
   // password
@@ -17,6 +23,12 @@ export class Database {
 
   constructor(config: DatabaseConfig) {
     this.config = config;
-    
+    this.connection = new Client({
+      host: config.url,
+      port: config.port,
+      database: config.database,
+      user: config.user,
+      password: config.password,
+    })
   }
 }
