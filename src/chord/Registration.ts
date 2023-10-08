@@ -1,4 +1,4 @@
-import { IntentsBitField } from "discord.js";
+import { IntentsBitField, Snowflake } from "discord.js";
 
 /**
  * Description WIP
@@ -14,6 +14,12 @@ export interface Registration {
   /// You should not add more intents than you strictly need for a Chord to function,
   /// as this increases global overhead on the bot.
   requiredIntents: IntentsBitField;
+  /// Forbid all introspection - **Turn this on if your Chord operates with sensitive data.**
+  forbidIntrospection?: boolean;
+  /// Function to call when we are deactivated on a guild
+  guildUnload?: (guildID: Snowflake) => void;
+  /// Function to call when we are activated on a guild
+  guildLoad?: (guildID: Snowflake) => void;
 }
 
 export const DefaultRegistration = () => {
