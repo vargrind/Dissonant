@@ -2,6 +2,7 @@ import { DISSONANT_VERSION, type DissonantVersion } from '../version'
 import { AdapterV1 } from './Adapter'
 import { DefaultRegistration, Registration } from './Registration';
 import { ContextV1 } from './Context';
+import { DissonantChordID } from '../types';
 
 /**
  * The root class for chords. All chords should inherit from this.
@@ -12,6 +13,8 @@ export class Chord {
   protected adapter: AdapterV1;
   /// Context
   protected context: ContextV1;
+  /// ID
+  protected id: DissonantChordID;
 
   //* Integration *//
 
@@ -22,9 +25,10 @@ export class Chord {
     return DISSONANT_VERSION
   }
 
-  constructor (adapter: AdapterV1, context: ContextV1) {
+  constructor (id: DissonantChordID, adapter: AdapterV1, context: ContextV1) {
     this.adapter = adapter;
     this.context = context;
+    this.id = id;
   }
 
   /**
