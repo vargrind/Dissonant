@@ -1,34 +1,34 @@
-import { Client } from "pg";
+import { Client } from 'pg'
 
 export interface Database {
-  
+
 }
 
 export interface DatabaseConfig {
   // url
-  url: string;
+  url: string
   // port
-  port: number;
+  port: number
   // user
-  user: string;
+  user: string
   // password
-  password: string;
+  password: string
   // database name
-  database: string;
+  database: string
 }
 
 export class Database {
-  private config: DatabaseConfig;
-  private connection: any;
+  private readonly config: DatabaseConfig
+  private readonly connection: any
 
-  constructor(config: DatabaseConfig) {
-    this.config = config;
+  constructor (config: DatabaseConfig) {
+    this.config = config
     this.connection = new Client({
       host: config.url,
       port: config.port,
       database: config.database,
       user: config.user,
-      password: config.password,
+      password: config.password
     })
   }
 }

@@ -1,0 +1,9 @@
+env:
+  node: true
+  es2021: true
+wextends: standard-with-typescript
+parserOptions:
+  ecmaVersion: latest
+rules: {
+  
+}
