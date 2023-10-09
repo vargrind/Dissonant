@@ -2,7 +2,7 @@
 /**
  * Bot-wide permission flags
  */
-export enum GlobalPermissions {
+export enum DissonantServicePermissions {
   /// Un/install and update Chords. This is a **very** dangerous permission to give.
   Installer = (1 << 0),
   /// Ask the bot to reboot itself
@@ -23,7 +23,7 @@ export enum GlobalPermissions {
 /**
  * Guild-wide permission flags
  */
-export enum ServerPermissions {
+export enum DissonantGuildPermissions {
   /// Load / Unload Chords
   Loader = (1 << 0),
   /// Entirely enable/disable the bot

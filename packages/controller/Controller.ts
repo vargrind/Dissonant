@@ -1,3 +1,5 @@
+import { DissonantServicePacket, DissonantServiceStatus } from "../types/Services";
+
 /**
  * Dissonant's core controller service
  *
@@ -6,5 +8,14 @@
  * * Runs Worker processes.
  */
 export class Controller {
-  
+
+  /// Handle a service plane packet
+  private handleServicePlanePacket(packet: DissonantServicePacket): DissonantServiceStatus {
+    switch(packet.payload.type) {
+      case "ping":
+      case "worker-log":
+        
+    }
+    return DissonantServiceStatus.Unrecognized;
+  }
 }

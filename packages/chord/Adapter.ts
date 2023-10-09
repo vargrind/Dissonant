@@ -10,9 +10,10 @@ import { DissonantEntityID } from "../types/Ids";
  */
 export interface AdapterV1 {
   /// A direct reference to the Discord.js client. This lets you directly act as the bot - this should only be for advanced use-cases.
-  //
-  //  todo: wrap this in something for safety
+  ///
+  /// * todo: wrap this in something for safety
   Discord: Client;
+  /// 
 
   // todo: get rid of below interfaces
 

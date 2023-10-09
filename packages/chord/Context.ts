@@ -13,4 +13,6 @@ export interface ContextV1 {
   /// Is the bot set to automatically expand intents based on what chords are installed?
   /// If FALSE, the receiving Chord should assume that this will not expand based on its whims.
   strictIntents: boolean;
+  /// Our shard number
+  shardNumber: number;
 }

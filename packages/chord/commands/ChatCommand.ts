@@ -1,4 +1,4 @@
-import { Type } from "../../types/Types";
+import { DissonantType } from "../../types/Types";
 import { ChatCommandBuilder } from "./ChatCommandBuilder";
 import { ChatCommandHandler } from "./ChatCommandHandler";
 
@@ -10,10 +10,12 @@ export interface ChatCommand {
   name: string;
   /// descrption
   desc: string;
+  /// default chat key - this is rebindable via configuration
+  key: string;
   /// our ChatCommandBuilder instance
   builder: ChatCommandBuilder;
   /// handler type
-  handler: Type<ChatCommandHandler>;
+  handler: DissonantType<ChatCommandHandler>;
 }
 
 /**
