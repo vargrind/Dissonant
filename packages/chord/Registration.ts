@@ -1,4 +1,4 @@
-import { IntentsBitField, Snowflake } from "discord.js";
+import { IntentsBitField, Message, Snowflake } from "discord.js";
 
 /**
  * Description WIP
@@ -16,9 +16,9 @@ export interface Registration {
   requiredIntents: IntentsBitField;
   /// Forbid all introspection - **Turn this on if your Chord operates with sensitive data.**
   forbidIntrospection?: boolean;
-  /// Function to call when we are deactivated on a guild
+  /// Function to call when we are disabled on a guild
   guildUnload?: (guildID: Snowflake) => void;
-  /// Function to call when we are activated on a guild
+  /// Function to call when we are enabled on a guild
   guildLoad?: (guildID: Snowflake) => void;
 }
 
