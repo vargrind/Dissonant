@@ -7,7 +7,7 @@ import { IntentsBitField } from "discord.js";
  * * The Context must be backwards-compatible within the same Dissonant major version.
  * * The Context must be assumed to be able to change at any time. Do not internally cache values.
  */
-export interface ContextV1 {
+export interface Context {
   /// Current intent set of the bot
   intents: IntentsBitField;
   /// Is the bot set to automatically expand intents based on what chords are installed?

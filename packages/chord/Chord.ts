@@ -1,33 +1,39 @@
-import { CHORD_VERSION, type ChordVersion } from './Version'
-import { AdapterV1 } from './Adapter'
-import { DefaultRegistration, Registration } from './Registration';
-import { ContextV1 } from './Context';
+import { Adapter } from './Adapter'
+import { Context } from './Context';
 import { DissonantChordID } from "../types/Ids";
+import { DissonantChordInterface, DissonantChordVersion } from '../types/Chords';
+import { Schematic } from './Schematic';
+import { Registration } from './Registration';
 
 /**
  * The root class for chords. All chords should inherit from this.
  * This is where the base definitions for everything, and the Dissonant adapter lives.
  */
-export class Chord {
+export abstract class Chord{
   /// Adapter
-  protected adapter: AdapterV1;
+  protected adapter: Adapter;
   /// Context
-  protected context: ContextV1;
+  protected context: Context;
+  /// Schematic
+  protected schematic: Schematic;
   /// ID
   protected id: DissonantChordID;
+  /// Registration
+  protected registration: Registration;
 
-  //* Integration *//
-
-  /**
-   * Gets our version.
-   */
-  public chordVersion (): ChordVersion {
-    return CHORD_VERSION
+  
+  public override __API_VERSION(): DissonantChordVersion {
+    return 1;
   }
 
-  constructor (id: DissonantChordID, adapter: AdapterV1, context: ContextV1) {
+  public override abstract registration() :
+
+  constructor (id: DissonantChordID, adapter: Adapter, context: Context, schematic: Schematic) {
+    super();
     this.id = id;
     this.adapter = adapter;
     this.context = context;
+    this.schematic = schematic;
+    this.registration = this.registration();
   }
 }

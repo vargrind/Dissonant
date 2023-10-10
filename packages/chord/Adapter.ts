@@ -1,4 +1,4 @@
-import { Channel, Client, Guild, Snowflake, User } from "discord.js";
+import { Channel, Client, Guild, PermissionsBitField, Snowflake, User } from "discord.js";
 import { DissonantEntityID } from "../types/Ids";
 
 /**
@@ -13,6 +13,8 @@ export interface AdapterV1 {
   // todo: way to do terminal commands
   // todo: chord interop
   // todo: any form of sandboxing whatsoever
+  // todo: permission checks
+  // todo: storage
 
   //* Discord - Fetch
 

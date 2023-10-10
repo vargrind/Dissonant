@@ -1,6 +1,6 @@
 /**
  * Service plane adapter
  */
-export class DissonantWorkerControl {
-  
+export class DissonantWorkerConnector {
+
 }
