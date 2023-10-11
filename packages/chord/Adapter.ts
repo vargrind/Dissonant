@@ -8,7 +8,7 @@ import { DissonantEntityID } from "../types/Ids";
  * * The Adapter must be backwards-compatible within the same Dissonant version.
  * * Do not manually cache the adapter - the bot core reserves the right to replace it at any time.
  */
-export interface AdapterV1 {
+export interface Adapter {
   // todo: way to do filesystem ops
   // todo: way to do terminal commands
   // todo: chord interop

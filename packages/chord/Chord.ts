@@ -4,6 +4,7 @@ import { DissonantChordID } from "../types/Ids";
 import { DissonantChordInterface, DissonantChordVersion } from '../types/Chords';
 import { Schematic } from './Schematic';
 import { Registration } from './Registration';
+import { DISSONANT_VERSION } from '../internal/version';
 
 /**
  * The root class for chords. All chords should inherit from this.
@@ -21,9 +22,9 @@ export abstract class Chord{
   /// Registration
   protected registration: Registration;
 
-  
-  public override __API_VERSION(): DissonantChordVersion {
-    return 1;
+
+  public readonly __API_VERSION(): DissonantChordVersion {
+    return DISSONANT_VERSION;
   }
 
   public override abstract registration() :

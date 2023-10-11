@@ -10,6 +10,9 @@ export interface DissonantWorkerContext {
   shard: number;
   /// total shards to give to discord auth
   shardTotal: number;
-  /// controller address
-  controllerURL: URL;
+  /// controller hostname
+  serviceHost: string;
+  /// controller port
+  servicePort: number;
+  /// database 
 }

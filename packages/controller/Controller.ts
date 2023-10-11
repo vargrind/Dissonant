@@ -1,4 +1,4 @@
-import { DissonantServicePacket, DissonantServiceStatus } from "../types/Services";
+import { DissonantServicePacket, DissonantServiceStatus } from "../service/Packet";
 
 /**
  * Dissonant's core controller service
@@ -8,7 +8,7 @@ import { DissonantServicePacket, DissonantServiceStatus } from "../types/Service
  * * Runs Worker processes.
  */
 export class DissonantController {
-  
+
 
   /// Handle a service plane packet
   private handleServicePlanePacket(packet: DissonantServicePacket): DissonantServiceStatus {

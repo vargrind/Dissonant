@@ -1,4 +1,4 @@
-import { DissonantServicePacket, DissonantServiceStatus } from "../types/Services";
+import { DissonantServicePacket, DissonantServiceStatus } from "../service/Packet";
 
 /**
  * Dissonant's bot worker instances

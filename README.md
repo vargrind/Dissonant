@@ -2,6 +2,12 @@
 
 A heavily WIP, in-development modular Discord bot.
 
+## Disclaimer
+
+This is primarily for educational purposes so that I may learn Node.js.
+
+I neither expect this to be 'finished' in a timely manner due to the massive feature-set, nor expect this to be perfect.
+
 ## Dev Notes
 
 - Webpanel support is planned by dynamically feeding React modules to clients.

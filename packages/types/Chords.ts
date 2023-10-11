@@ -6,7 +6,11 @@ import { DissonantChordID } from "./Ids";
 import { DissonantType } from "./Types";
 
 /// typedef for chord version
-export type DissonantChordVersion = number;
+export type DissonantChordVersion = {
+  major: number,
+  minor: number,
+  patch: number,
+};
 
 /**
  * This is what module.exports needs to be on a chord file for it to load.
